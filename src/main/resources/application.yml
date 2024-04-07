@@ -1,0 +1,20 @@
+#spring:
+#  config:
+#    activate:
+#      on-profile: leonidos
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: Leonid-123
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        show-sql: true
+#logging:
+#  level:
+#    org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: ERROR
+#    projectHHFromLeonid.tracker: ${conf.log.level:DEBUG}
