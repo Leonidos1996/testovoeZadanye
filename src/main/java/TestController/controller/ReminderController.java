@@ -35,7 +35,8 @@ public class ReminderController {
 
     @GetMapping("/search/title")
     public ResponseEntity<List<Reminder>> searchByTitle(@RequestParam String title) {
-        return new ResponseEntity<>(reminderService.findByTitleContaining(title), HttpStatus.OK);
+        List<Reminder> reminders = reminderService.findAllByOrderByTitleAsc();
+        return new ResponseEntity<>(reminders, HttpStatus.OK);
     }
 
 
